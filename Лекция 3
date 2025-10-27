@@ -1,0 +1,48 @@
+""" #Задание 1
+a = 42
+b = 3.14159
+c = "Hello, Python!"
+d = True
+e = [1, 2, 3]
+f = (4, 5, 6)
+g = {"name": "Alice", "age": 30}
+h = {7, 8, 9}
+i = None
+Z=type(a),type(b),type(c),type(d),type(e),type(f),type(g),type(h),type(i)
+print(Z)
+"""
+"""#Задание 2
+my_list = [1,2,3]
+print(my_list)
+my_list[0]=100
+print(my_list) #работает так как и задуманно ведь это int 
+
+my_string = "cat"
+print(my_string)
+my_string[0]="b"
+print(my_string) #не работает так как str не изменяемый тип данных
+
+my_tuple = (1,2,3)
+print(my_tuple)
+my_tuple[0]= 100
+print(my_tuple) #не работает так как tuple не изменяемый тип данных
+"""
+""" #Задание 3
+try:
+    num1 = int(input("Введите число Num1"))
+    num2 = int(input("Введите число Num2"))
+    Zlojenie=(num1+num2)
+except ValueError:
+    print("Ошибка: Введён некорректный тип данных! ")
+print(Zlojenie)
+"""
+""" #Задание 4
+student=(type(int))#Для счёта студентов нужен int
+temperature=(type(float))#Для температуры нужны дробные числа
+login=(type(str))#логин записывается буквенным типом данных
+uvedomlenie=(type(bool))#показывает есть ли уведомление True or False
+films=(type(list))# выводит список
+coordinates=(type(tuple))# фиксирует данные координат
+UniUD=(type(set))# позволяет управлять динамическим множеством 
+CountryMain=(type(dict))# хранит данные в типе "ключ:значение"
+"""
