@@ -17,15 +17,15 @@ print(my_list)
 my_list[0]=100
 print(my_list) #работает так как и задуманно ведь это int 
 
-my_string = "cat"
-print(my_string)
-my_string[0]="b"
-print(my_string) #не работает так как str не изменяемый тип данных
-
 my_tuple = (1,2,3)
 print(my_tuple)
 my_tuple[0]= 100
 print(my_tuple) #не работает так как tuple не изменяемый тип данных
+
+my_string = "cat"
+print(my_string)
+my_string[0]="b"
+print(my_string) #не работает так как str не изменяемый тип данных
 """
 """ #Задание 3
 try:
@@ -53,3 +53,11 @@ print("Длина списка:", shopping_list)
 unique_items = set(shopping_list)
 print(unique_items)
 """
+
+name= input("ваше имя:")
+age= input("ваш возраст:")
+lessons=input("Любимые предметы:")
+print("Имя:", name)
+print("Возраст", Age)
+print("Любимые предметы", lessons)
+
