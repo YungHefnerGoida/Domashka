@@ -1,0 +1,91 @@
+#Задание 1
+"""
+import math
+
+x = float(input('Введите число:'))
+floor = math.floor(x)
+ceil = math.ceil(x)
+resul = floor + ceil
+print(resul)
+
+"""
+#Задание 2
+"""
+
+import math
+
+x1 = float(input('Введите число x1'))
+y1 = float(input('Введите число y1'))
+x2 = float(input('Введите число x2'))
+y2 = float(input('Введите число y2'))
+dist = math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
+print(dist)
+
+"""
+#Задание 3
+"""
+
+import math
+number = int(input("Введите Входные данные:"))
+
+thousand = number // 1000;
+hundred = (number // 100) % 10;
+ten = (number // 10) % 10;
+unit = number % 10;
+
+print("Цифра в позиции тысяч равна", (thousand))
+print("Цифра в позиции сотен равна", (hundred))
+print("Цифра в позиции десятков равна", (ten))
+print("Цифра в позиции единиц равна", (unit))
+
+"""
+#Задание 4
+"""
+import math
+
+z = int(input("Введите сколько мандаринов:"))  
+v = int(input("Введите сколько студентов:"))
+mandarins_per_students = z // v
+mandarin_out = z % v
+
+print("Каждому досталось", mandarins_per_students, "мандаринов")
+print("Осталось мандаринов:", mandarin_out)
+
+"""
+#Задание 5
+"""
+minut = int(input())
+
+hour = minut // 60
+remain_minut = minut % 60
+
+print((minut), 'мин - это', (hour), "час-ов/a", (remain_minut), "минут/ы")
+
+"""
+#Задание 6
+"""
+
+import math
+
+x_degrees = float(input())
+x_radians = math.radians(x_degrees)
+
+sin_x = math.sin(x_radians)
+cos_x = math.cos(x_radians)
+tg_x = math.tan(x_radians)
+tg_squared = tg_x ** 2
+
+result = sin_x + cos_x + tg_squared
+print(result)
+
+"""
+#Задание 7
+"""
+
+seat = int(input())
+
+compartment = (seat + 3) // 4
+
+print(compartment)
+
+"""
