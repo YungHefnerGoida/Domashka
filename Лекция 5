@@ -1,0 +1,76 @@
+#Задание 1
+"""
+TAX_RATE = 0.13
+income = float(input("Введите ваш годовой доход:"))
+tax = income * TAX_RATE
+real_income = income-tax
+print(f"Общий доход: {income:,.2f} руб.")
+print(f"Сумма налога: {tax:,.2f} руб.")
+print(f"Полученные деньги пользователя: {real_income:,.2f} руб.")
+"""
+from os import get_handle_inheritable
+
+#Задание 2
+"""
+mass,height = input("Введи свой вес в кг и рост в метрах через пробел:").split()
+mass = float(mass)
+height = float(height)
+IMT = mass / (height**2)
+print(f"ваш рейтинг ИМТ равен: {IMT:,.1f} единиц.")
+"""
+
+#Задание 3
+
+"""
+BEL_TO_RUS = 23.64
+Bel_rub_amount = float(input("Введите вашу сумму в Белорусских рублях:"))
+def convert_to_rus(BEL_TO_RUS):
+    return Bel_rub_amount * BEL_TO_RUS #Возвращает рассчитаную сумму в рублях
+print("Ваша Сумма в Российских Рублях:", convert_to_rus(BEL_TO_RUS))
+"""
+
+#Задание 4
+import math
+
+def calculate_rectangle_area(width,height):
+    """
+    Вычислает площадь прямоугольника
+    """
+    return width * height
+def calculate_circle_area(radius):
+    """
+    Вычислает площадь круга
+    """
+    return 2 * math.pi * radius
+width = float(input("Введите ширину прямоугольника: "))
+height = float(input("Введите высоту прямоугольника: "))
+radius= float(input("Введите Радиус окружности: "))
+print(f"Площадь прямоугольника: {calculate_rectangle_area(width, height):.f2}")
+print(f"Площадь окружности: {calculate_circle_area(radius):.f2}")
+"""
+
+#Задание 5
+
+"""
+print("Банкомат")
+
+sum = int(input("Введите сумму кратную 100: "))
+bill5000 = sum // 5000 #Для 5000 Банкнот
+sum = sum % 5000
+bill2000 = sum // 2000 #Для 2000 Банкнот
+sum = sum % 2000
+bill1000 = sum // 1000 #Для 1000 Банкнот
+sum = sum % 1000
+bill500 = sum // 500 #Для 500 Банкнот
+sum = sum % 500
+bill200 = sum // 200 #Для 200 Банкнот
+sum = sum % 200
+bill100 = sum // 100 #Для 100 Банкнот
+sum = sum % 100
+
+print(f"5000 Банкноты: {bill5000}")
+print(f"2000 Банкноты: {bill2000}")
+print(f"1000 Банкноты: {bill1000}")
+print(f"500 Банкноты: {bill500}")
+print(f"200 Банкноты: {bill200}")
+print(f"100 Банкноты: {bill100}")
