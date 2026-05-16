@@ -1,0 +1,28 @@
+#Задание 1
+"""
+n=int(input("Введите число: "))
+
+for num in range(1, n+1):
+    if not (5 <= num <=9 or 17 <=num <= 37 or 78 <= num <= 87):
+        print(num)
+"""
+#Задание 3
+"""
+price = int(input("Введите цену услуги ведьмака: "))
+coin_count = 0
+
+while price > 0:
+    if price >= 25:
+        coin_count += price // 25
+        price %= 25
+    elif price >= 10:
+        coin_count += price // 10
+        price %= 10
+    elif price >= 5:
+        coin_count += price // 5
+        price %= 5
+    coin_count += price
+    break
+
+print(f"Минимальное количество монет: {coin_count}")
+"""
