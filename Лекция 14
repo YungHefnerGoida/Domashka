@@ -1,0 +1,142 @@
+"""
+import random
+
+nested_list = [[random.randint(1, 100) for _ in range(5)] for _ in range(3)]
+
+print("Исходный список:")
+for row in nested_list:
+    print(row)
+
+max_value = nested_list[0][0]
+max_row = 0
+max_col = 0
+
+for i in range(len(nested_list)):
+    for j in range(len(nested_list[i])):
+        if nested_list[i][j] > max_value:
+            max_value = nested_list[i][j]
+            max_row = i
+            max_col = j
+
+print(f"\nМаксимальный элемент: {max_value}")
+print(f"Позиция: строка {max_row}, индекс {max_col}")
+"""
+"""
+import random
+
+nested_list = [[random.randint(1, 100) for _ in range(4)] for _ in range(3)]
+
+print("Сгенерированный список:")
+for row in nested_list:
+    print(row)
+
+row_sums = []
+max_sum = 0
+max_row_index = 0
+
+for i in range(len(nested_list)):
+    current_sum = 0
+    for j in range(len(nested_list[i])):
+        current_sum += nested_list[i][j]
+    row_sums.append(current_sum)
+    
+    if current_sum > max_sum:
+        max_sum = current_sum
+        max_row_index = i
+
+total_sum = sum(row_sums)
+
+for i, s in enumerate(row_sums):
+    print(f"Сумма строки {i}: {s}")
+print(f"Общая сумма всех элементов: {total_sum}")
+print(f"Строка с максимальной суммой: {max_row_index} (сумма = {max_sum})")
+"""
+"""
+import random
+
+nested_list = [[random.randint(-10, 10) for _ in range(5)] for _ in range(4)]
+
+print("Исходный список:")
+for row in nested_list:
+    print(row)
+
+filtered_list = []
+
+for i in range(len(nested_list)):
+    positive_row = []
+    for j in range(len(nested_list[i])):
+        if nested_list[i][j] > 0:
+            positive_row.append(nested_list[i][j])
+    filtered_list.append(positive_row)
+
+print("\nОтфильтрованный список (только положительные):")
+for row in filtered_list:
+    print(row)
+"""
+
+"""
+import random
+nested_list = [[random.randint(1, 10) for _ in range(4)] for _ in range(3)]
+
+search_value = 5
+
+print("Исходный список:")
+for row in nested_list:
+    print(row)
+print(f"\nИщем элемент: {search_value}")
+
+positions = []
+
+for i in range(len(nested_list)):
+    for j in range(len(nested_list[i])):
+        if nested_list[i][j] == search_value:
+            positions.append((i, j))
+
+if positions:
+    print(f"Элемент {search_value} найден на позициях:")
+    for pos in positions:
+        print(f"  строка {pos[0]}, индекс {pos[1]}")
+else:
+    print(f"Элемент {search_value} не найден")
+
+"""
+"""
+N = int(input())
+items = list(map(int, input().split()))
+
+for i in range(len(items)):
+    for j in range(i + 1, len(items)):
+        if items[i] < items[j]:
+            items[i], items[j] = items[j], items[i]
+
+top_items = items[:N]
+
+max_value = 0
+for value in top_items:
+    if value > 0:
+        max_value += value
+
+print(max_value)
+"""
+"""
+prices = list(map(int, input().split()))
+
+ascending = prices.copy()
+for i in range(len(ascending)):
+    for j in range(i + 1, len(ascending)):
+        if ascending[i] > ascending[j]:
+            ascending[i], ascending[j] = ascending[j], ascending[i]
+
+descending = prices.copy()
+for i in range(len(descending)):
+    for j in range(i + 1, len(descending)):
+        if descending[i] < descending[j]:
+            descending[i], descending[j] = descending[j], descending[i]
+
+original = prices.copy()
+reversed_order = prices[::-1]
+print(f"Сортировка по возрастанию: {ascending}")
+print(f"Сортировка по убыванию: {descending}")
+print(f"Оригинальный порядок (от старых к новым): {original}")
+print(f"Обратный порядок (от новых к старым): {reversed_order}")
+"""
