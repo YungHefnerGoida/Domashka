@@ -1,0 +1,42 @@
+def main():
+
+    labyrinth_string = input("Введите строку лабиринта из 25 символов: ")
+    if len(labyrinth_string) != 25:
+        print("Ошибка: строка должна содержать ровно 25 символов!")
+        return
+
+    print("\n Задание 1.1: Лабиринт ")
+    for i in range(5):
+        row = labyrinth_string[i * 5:(i + 1) * 5]
+        print(row)
+    print("\n Задание 1.2: Координаты входа (n) ")
+    index_n = labyrinth_string.find('⭐')
+
+    if index_n == -1:
+        print("Вход (символ 'n') не найден в лабиринте!")
+        return
+    row_n = index_n // 5
+    col_n = index_n % 5
+
+    print(f"Вход находится в строке {row_n}, столбце {col_n}")
+
+    print("\n Задание 1.3: Координаты выхода (f) ")
+    index_f = labyrinth_string.find('🟫')
+    if index_f == -1:
+        print("Выход (символ 'f') не найден в лабиринте!")
+        return
+    row_f = index_f // 5
+    col_f = index_f % 5
+    print(f"Выход находится в строке {row_f}, столбце {col_f}")
+
+    print("\n Задание 1.4: Расстояние между входом и выходом ")
+    manhattan_distance = abs(row_n - row_f) + abs(col_n - col_f)
+    print(f"Манхэттенское расстояние: {manhattan_distance} шагов")
+
+    print("\n Задание 1.5: Количество монет ")
+    coins_count = labyrinth_string.count('m')
+    print(f"Количество монет в лабиринте: {coins_count}")
+    print("\n Общая информация ")
+    print(f"Размер лабиринта: 5x5")
+    print(f"Всего символов в строке: {len(labyrinth_string)}")
+main()
