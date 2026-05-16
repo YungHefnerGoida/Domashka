@@ -1,0 +1,82 @@
+"""
+words = input().split()
+unique_words = set(words)
+
+print(f"Количество: {len(unique_words)}")
+print(f"Слова: {' '.join(sorted(unique_words))}")
+"""
+"""
+allowed_input = input()
+allowed = set(allowed_input.split())
+
+incoming_input = input()
+incoming = incoming_input.split()
+
+for id in incoming:
+    if id in allowed:
+        print("OK")
+    else:
+        print("ADDED")
+        allowed.add(id)
+"""
+
+"""
+
+server_a_input = input()
+server_a = set(server_a_input.split())
+
+server_b_input = input()
+server_b = set(server_b_input.split())
+
+common = server_a & server_b
+lost = server_a - server_b
+
+print(f"Общие: {' '.join(sorted(common))}")
+print(f"Потерянные: {' '.join(sorted(lost))}")
+"""
+
+"""
+cia_input = input()
+cia = set(cia_input.split())
+mi6_input = input()
+mi6 = set(mi6_input.split())
+kgb_input = input()
+kgb = set(kgb_input.split())
+
+double_agents = (cia & mi6) - kgb
+
+print(' '.join(sorted(double_agents, reverse=True)))
+"""
+"""
+
+log1 = set(input().split())
+log2 = set(input().split())
+log3 = set(input().split())
+
+all_three = log1 & log2 & log3
+all_ips = log1 | log2 | log3
+result = all_ips - all_three
+
+print(' '.join(sorted(result)))
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
