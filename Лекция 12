@@ -1,0 +1,64 @@
+"""
+n = int(input())
+
+count = (n + 1) // 2
+odd_numbers = [0] * count
+
+n_count = 0
+for num in range(1, n + 1):
+    if num % 2 != 0:
+        odd_numbers[n_count] = num
+        n_count += 1
+
+print(odd_numbers)
+"""
+"""
+prices = [1500, 500, 2000, 3500, 1000, 4500]
+
+max_price = max(prices)
+min_price = min(prices)
+total = sum(prices)
+average = total / len(prices)
+
+print(f"Самый дорогой товар: {max_price}")
+print(f"Самый дешёвый товар: {min_price}")
+print(f"Общая стоимость: {total}")
+print(f"Средняя цена: {average}")
+"""
+"""
+users = ['Admin', 'Guest', 'User', 'Bot']
+
+users[2] = 'Moderator'
+users[-1] = 'SuperAdmin'
+users.append('Newbie')
+
+print(users)
+"""
+"""
+marks = [5, 4, 3, 5, 2, 5, 4, 3, 5, 5]
+ 
+count_five = 0   
+count_two = 0    
+ 
+for mark in marks:
+    if mark == 5:
+        count_five += 1 
+    elif mark == 2:
+        count_two += 1
+        
+print(f"Количество пятёрок: {count_five}")
+print(f"Количество двоек: {count_two}")
+"""
+"""
+data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+first_three = data[0:3]
+last_three = data[-3:]
+reversed_list = data[::-1]
+odd_indices = data[1::2]
+
+print(f"Первая тройка: {first_three}")
+print(f"Последняя тройка: {last_three}")
+print(f"Обратный порядок: {reversed_list}")
+print(f"Элементы с нечётными индексами: {odd_indices}")
+"""
