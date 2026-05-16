@@ -1,0 +1,62 @@
+"""
+acces_pin=4590
+
+while True:
+    pin = int(input("Введите Пин-код:"))
+
+    if pin == acces_pin:
+        print("Доступ разрешен")
+        break
+    else:
+        print("Ошибка, Попробуйте ещё раз")
+
+"""
+
+"""
+first = int(input("Введите первое число:"))
+
+while True:
+    second = int(input("Введите второе число:"))
+    if second > first:
+        break
+    else:
+        print("Ошибка, число меньше прошлого")
+
+while True:
+    third = int(input("Введите третье число:"))
+    if third > second:
+        break
+    else:
+        print("Ошибка, число меньше прошлого")
+"""
+"""
+max_num = 0
+
+while True:
+    num = int(input("Введите числа"))
+    if num == 0:
+        break
+    if num > max_num:
+        max_num = num
+print(max_num)
+"""
+"""
+total = 0
+
+while True:
+    price = int(input("Введите цену"))
+
+    if price == 0:
+        break
+
+    if price < 0:
+        print("")
+        continue
+
+    total += price
+
+if total > 1000:
+    total = total * 0.9
+
+print(int(total))
+"""
