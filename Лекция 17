@@ -1,0 +1,124 @@
+"""
+def get_days(month):
+    match month:
+        case 1|3|5|7|8|10|12:
+            days = 31
+        case 4|6|9|11:
+            days = 30
+        case 2:
+            days = 28
+        case _:
+            print("Ошибка, нет такого месяца")
+    return days
+#print(get_days(1))
+#print(get_days(2))
+#print(get_days(9))
+days = int(input())
+print(get_days(days))
+"""
+"""
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2,int(num**0.5)+1):
+        if num % i == 0:
+            return False
+    return True
+#print(is_prime(1))
+#print(is_prime(10))
+#print(is_prime(17))
+num = int(input())
+print(is_prime(num))
+"""
+"""
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2,int(num**0.5)+1):
+        if num % i == 0:
+            return False
+    return True
+def get_next_prime(num):
+    prime = num + 1
+    while not is_prime(prime):
+        prime += 1
+    return prime
+
+#print(get_next_prime(6))
+#print(get_next_prime(7))
+#print(get_next_prime(14))
+num = int(input())
+print(get_next_prime(num))
+"""
+"""
+def is_password_good(password):
+    upper_count = sum(1 for char in password if char.isupper())
+    lower_count = sum(1 for char in password if char.islower())
+    digit_count = sum(1 for char in password if char.isdigit())
+    if len(password) < 8:
+        return False
+    elif upper_count <= 1:
+        return False
+    elif lower_count <= 1:
+        return False
+    elif digit_count <= 1:
+        return False
+    else:
+        return True
+#print(is_password_good('abbCC11OP'))
+#print(is_password_good('abC1pu'))
+password = input()
+print(is_password_good(password))
+"""
+"""
+def is_valid_password(password):
+    try:
+        new_password = password.replace(':',' ')
+        b_true=0
+        a,b,c = new_password.split()
+
+
+        a,b,c = str(a),int(b),int(c)
+        if b <= 1:
+            b_true=0
+        else:
+            for i in range(2, int(b ** 0.5) + 1):
+                if b % i == 0:
+                    b_true = 0
+                else:
+                    b_true = 1
+        if a == a[::-1] and b_true == 1 and c % 2 == 0:
+            return True
+        else:
+            return False
+    except ValueError:
+        return False
+#print(is_valid_password('1221:101:22'))
+#print(is_valid_password('565:30:50'))
+#print(is_valid_password('112:7:9'))
+#print(is_valid_password('1221:101:22:22'))
+password = input()
+print(is_valid_password(password))
+"""
+"""
+import math
+
+def solve(a,b,c):
+    d = (b**2) - (4*a*c)
+    if d < 0:
+          return None
+    elif d == 0:
+          x1 = (-b-math.sqrt(d))/(2*a)
+          x2 = (-b+math.sqrt(d))/(2*a)
+
+    elif d > 0:
+          x1 = (-b+math.sqrt(d))/(2*a)
+          x2 = (-b-math.sqrt(d))/(2*a)
+    return x1,x2
+
+print(solve(1, -4, -5))
+print(solve(-2, 7, -5))
+print(solve(1, 2, 1))
+num1,num2,num3 = map(int,input("Enter a number:").split())
+print(solve(num1,num2,num3))
+"""
