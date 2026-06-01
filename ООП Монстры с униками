@@ -1,0 +1,85 @@
+
+"""
+import random
+
+class Monster:
+    def __init__(self, name, hp, dmg):
+        self.__name = name
+        self.__hp = hp
+        self.__dmg = dmg
+
+    def get_name(self):
+        return self.__name
+
+    def get_hp(self):
+        return self.__hp
+
+    def get_dmg(self):
+        return self.__dmg
+
+    def set_hp(self, hp):
+        if self.__hp < 0:
+            self.__hp = 0
+        else:
+            self.__hp = hp
+
+    def is_alive(self):
+        return self.__hp > 0
+
+    def show_status(self):
+        print(f"[{self.__name}] HP: {self.get_hp()}")
+
+    def take_dmg(self, dmg):
+        self.__hp -= self.__dmg
+
+    def attack_hunter(self, hunter):
+        hunter.hp -= self.dmg
+        print(f"{self.name} атакует {hunter.name} и наносит {self.dmg} урона! У охотника осталось {hunter.hp} HP")
+
+class Zombie(Monster):
+    def __init__(self, name):
+        super().__init__(name, hp = 120, dmg = 10)
+
+    def take_dmg(self, dmg):
+        super().take_dmg(dmg)
+        if dmg >= 30:
+            print("Зомби теряет конечность!")
+        print(f"Зомби Получил {dmg} урона, HP:{self.get_hp()}")
+
+class Vampire(Monster):
+    def __init__(self, name):
+        super().__init__(name, hp = 80, dmg = 15)
+
+    def take_dmg(self, dmg):
+        dmg -= 5
+        super().take_dmg(dmg)
+        print("Дракула поглощает 5 урона!")
+        print(f"Получено {dmg} урона, HP: {self.get_hp()}")
+
+class Ghost(Monster):
+    def __init__(self, name):
+        super().__init__(name, hp = 60, dmg = 20)
+
+    def take_dmg(self, dmg):
+        if random.random() <= 0.3:
+            print("Удар прошел сквозь призрака")
+        else:
+            super().take_dmg(dmg)
+            print(f"Призрак получил {dmg} урона, HP: {self.get_hp()}")
+
+
+class Werewolf(Monster):
+    def __init__(self, name):
+        super().__init__(name, hp = 100, dmg = 25)
+
+    def take_dmg(self, dmg):
+        super().take_dmg(dmg)
+        if self.get_hp() < 50:
+            print("Превращается в оборотня")
+        print(f"Оборотень получил {self.dmg} урона, HP: {self.get_hp()}")
+
+v = Vampire("Дракула")
+v.take_dmg(30)
+z = Zombie("Зомби")
+z.take_dmg(30)
+"""
